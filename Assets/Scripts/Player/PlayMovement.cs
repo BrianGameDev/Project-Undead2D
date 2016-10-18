@@ -33,7 +33,7 @@ public class PlayMovement : MonoBehaviour
     void FixedUpdate()
     {
         var movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        playerBody.MovePosition(playerBody.position + movementVector * maxSpeed * Time.deltaTime);
+        playerBody.MovePosition(playerBody.position + movementVector * maxSpeed * Time.fixedDeltaTime);
 
     }
 
